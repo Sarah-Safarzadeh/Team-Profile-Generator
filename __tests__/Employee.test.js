@@ -20,3 +20,15 @@ test("test employee id", () => {
 
   expect(employee.id).toEqual(expect.any(Number));
 });
+
+test("test employee email", () => {
+  const employee = new Employee('sarah@work.com');
+
+  expect(employee.email).toBe('sarah@work.com');
+});
+
+test("test employee role", () => {
+  const employee = new Employee;
+
+  expect(employee.getRole()).toBe('Employee');
+});
