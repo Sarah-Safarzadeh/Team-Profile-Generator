@@ -77,5 +77,24 @@ function engineerData() {
           answers.officeNumber
         );
         employees.push(Manager);
+        newMember();
+      });
+  };
+
+  const newMember = () => {
+    inquirer
+      .prompt([
+        {
+          type: 'list',
+          name: 'role',
+          message: "Please select a role:",
+          choices: ['Engineer', 'Intern'],
+        },
+      ])
+      .then((roles) => {
+        if (roles.role === 'Engineer') {
+        }
+        if (roles.role === 'Intern') {
+        }
       });
   };
