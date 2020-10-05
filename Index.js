@@ -67,4 +67,15 @@ function engineerData() {
             }
           },
         },
-      ]);
+      ])
+      .then((answers) => {
+        const Manager = new Manager(
+          answers.name,
+          answers.id,
+          answers.email,
+          answers.role,
+          answers.officeNumber
+        );
+        employees.push(Manager);
+      });
+  };
