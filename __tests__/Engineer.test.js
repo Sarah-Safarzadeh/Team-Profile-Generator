@@ -9,13 +9,13 @@ test ('test for Engineer object', () => {
 });
 
 test ('test for Engineer name', () => {
-    const engineer = new Engineer();
+    const engineer = new Engineer('Fleur');
 
     expect(engineer.name).toBe('Fleur')
 });
     
 test ('test for Engineer id', () => {
-    const engineer = new Engineer();
+    const engineer = new Engineer('oui');
 
     expect(engineer.id).toBe('oui');
 });
@@ -28,6 +28,12 @@ test ('test for Engineer email', () => {
 
 test ('test for Engineer role', () => {
     const engineer = new Engineer();
+
+    expect(engineer.getRole()).toBe('Engineer');
+});
+
+test ('test for Engineer github', () => {
+    const engineer = new Engineer(github);
 
     expect(engineer.getRole()).toBe('Engineer');
 });
